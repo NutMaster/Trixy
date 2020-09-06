@@ -1,6 +1,6 @@
 # :mortar_board: Trixy
-Project Serious Game.
-By Tristan Weij
+Project Serious Game. <br />
+By: Tristan Weij
 
 ## :clipboard: Description
 Trixy is an online learning platform for elementary school students.
