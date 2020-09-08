@@ -1,0 +1,25 @@
+/** Main page settings */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Changes the select field color from blue to gray */
+::selection {
+    background: #bababa;
+}
+
+select::-ms-expand {
+    display: none;
+}
