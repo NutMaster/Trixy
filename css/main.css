@@ -23,3 +23,24 @@ body {
 select::-ms-expand {
     display: none;
 }
+
+/** Header settings */
+
+header {
+    padding: 10px;
+    background-color: aquamarine;
+}
+
+nav {
+    padding: 10px;
+    background-color: brown;
+}
+
+.header-a {
+    color: black;
+    text-decoration: none;
+}
+
+h1 {
+    background-color: coral;
+}
