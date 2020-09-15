@@ -5,7 +5,7 @@
 //         console.log(this.responseText);
 //       }
 //     };
-//     xhttp.open("GET", "sendJSON.php", true);
+//     xhttp.open("GET", "../php/sendJSON.php", true);
 //     xhttp.send();
 // }
 
