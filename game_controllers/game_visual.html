@@ -3,13 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-        <title>Trixy | Home</title>
+        <title>Trixy | Spellen</title>
     </head>
     <body>
         <header>
-            <img src="https://imgur.com/VCs2ndo.png" alt="header-logo" id="header-logo">
             <nav class="topnav" id="header-nav">
                 <a class="header-a" href="#">Home</a>
                 <a class="header-a" href="#">Inloggen</a>
@@ -18,11 +17,16 @@
         </header>
 
         <main>
-
+            <p id="console-question"></p>
+            <input type="number" id="player-answer">
+            <input type="submit" id="player-submit" value="Nakijken">
+            <p id="console-answer"></p>
         </main>
-        
+
         <footer>
-            
+
         </footer>
+
+        <script src="eventListeners.js"></script>
     </body>
 </html>

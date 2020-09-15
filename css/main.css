@@ -15,7 +15,7 @@ body {
     padding: 0;
 }
 
-/* Changes the select field color from blue to gray */
+/* Changes the selection color from blue to gray */
 ::selection {
     background: #bababa;
 }
@@ -24,7 +24,7 @@ select::-ms-expand {
     display: none;
 }
 
-/** Header settings */
+/** Header styling */
 
 header {
     padding: 10px;
@@ -41,6 +41,20 @@ nav {
     text-decoration: none;
 }
 
-h1 {
-    background-color: coral;
+/** Main styling */
+
+main {
+    padding: 20px;
+}
+
+#console-answer {
+    padding: 20px;
+}
+
+.player-correct {
+    background-color: green;
+}
+
+.player-false {
+    background-color: red;
 }
