@@ -1,0 +1,40 @@
+{
+    "easy":{
+        "questions":[
+            {
+                "question": "4 x 4",
+                "correctAnswer": 16
+            },
+            {
+                "question": "5 - 2",
+                "correctAnswer": 3
+            }
+        ]
+    },
+
+    "normal":{
+        "questions":[
+            {
+                "question": "32 x 3",
+                "correctAnswer": 96
+            },
+            {
+                "question": "36 / 6",
+                "correctAnswer": 6
+            }
+        ]
+    },
+
+    "hard":{
+        "questions":[
+            {
+                "question": "Wat is de wortel van 9",
+                "correctAnswer": 3
+            },
+            {
+                "question": "12 x 12",
+                "correctAnswer": 144
+            }
+        ]
+    }
+}

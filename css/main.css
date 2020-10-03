@@ -45,6 +45,21 @@ nav {
 
 main {
     padding: 20px;
+    background-color: coral;
+}
+
+#main-game-wrapper {
+    background-color: orange;
+}
+
+#player-answer {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+#player-answer:active {
+    border: none;
 }
 
 #console-answer {
