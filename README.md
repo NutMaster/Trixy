@@ -3,8 +3,14 @@ Project Serious Game. <br />
 By: Tristan Weij
 
 ## :clipboard: Description
-Trixy is an online learning platform for elementary school students.
+Trixy is an online learning platform for elementary school students. Earn points by correctly answering various questions in all kinds of gamemodes: <br />
+:straight_ruler: Maths <br />
+:black_nib: Grammar <br />
+:books: English <br />
+:seedling: Biology
 
+Our system keeps track of how many points you have gathered, <br />
+the more points you have collected, the higher you get on the leaderboard.
 
 ## :point_right: Extra information
 
