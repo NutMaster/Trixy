@@ -27,7 +27,7 @@ select::-ms-expand {
 /** Header styling */
 
 header {
-    padding: 10px;
+    padding: 5px;
     background-color: aquamarine;
 }
 
@@ -44,32 +44,70 @@ nav {
 /** Main styling */
 
 main {
+    padding: 5px;
+}
+
+#game-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#game-wrapper-title {
     padding: 20px;
-    background-color: coral;
+    background-color: #F6AE2D;
+    border-radius: 4px;
 }
 
-#main-game-wrapper {
-    background-color: orange;
-}
-
-#player-answer {
+.game-wrapper-container {
+    display: flex;
+    flex-direction: column;
     padding: 10px;
-    border-radius: 20px;
-    border: none;
 }
 
-#player-answer:active {
-    border: none;
+.game-wrapper-block {
+    padding: 5px;
 }
 
-#console-answer {
-    padding: 20px;
+#game-wrapper-left {
+    width: 40%;
 }
 
-.player-correct {
-    background-color: green;
+#game-wrapper-timer {
+    /*background-color: red;*/
 }
 
-.player-false {
-    background-color: red;
+.font-awesome-align {
+    vertical-align: middle;
+}
+
+.timer {
+    color: #F6AE2D;
+}
+
+.arrow {
+    color: #F6AE2D;
+}
+
+#game-wrapper-right {
+    width: 60%;
+}
+
+#game-wrapper-answer {
+    height: 100%;
+    background-color: antiquewhite;
+}
+
+#game-wrapper-response {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 100%;
+    background-color: #AEF78E;
+    border-radius: 5px;
+}
+
+/** Footer styling */
+
+footer {
+    padding: 5px;
 }

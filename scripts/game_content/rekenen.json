@@ -8,6 +8,38 @@
             {
                 "question": "5 - 2",
                 "correctAnswer": 3
+            },
+            {
+                "question": "25 + 15",
+                "correctAnswer": 40
+            },
+            {
+                "question": "35 + 25",
+                "correctAnswer": 60
+            },
+            {
+                "question": "25 + 15",
+                "correctAnswer": 40
+            },
+            {
+                "question": "51 + 16",
+                "correctAnswer": 67
+            },
+            {
+                "question": "48 + 42",
+                "correctAnswer": 90
+            },
+            {
+                "question": "47 + 39",
+                "correctAnswer": 86
+            },
+            {
+                "question": "3 x 9",
+                "correctAnswer": 27
+            },
+            {
+                "question": "20 - 13",
+                "correctAnswer": 7
             }
         ]
     },
