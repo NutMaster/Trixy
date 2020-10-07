@@ -3,9 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link rel="stylesheet" type="text/css" href="css/main.css">
         <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
         <script src="https://kit.fontawesome.com/65e5ee69aa.js" crossorigin="anonymous"></script>
+
         <title>Trixy | Games</title>
     </head>
     <body>
@@ -20,25 +23,25 @@
 
         <main>
             <h1 id="game-wrapper-title">Mathematics | easy</h1>
-
             <div id="game-wrapper">
                 <div id="game-wrapper-left" class="game-wrapper-container">
                    <div id="game-wrapper-timer" class="game-wrapper-block">
-                        <h2>Time left: 60 seconds</h2>
+                        <h2>Time left: 90 seconds</h2>
                    </div>
                    <div id="game-wrapper-timer" class="game-wrapper-block">
-                        <i class="fas fa-award fa-2x font-awesome-align"></i></i> 180 points
+                        <i class="fas fa-award fa-2x font-awesome-align"></i></i> 0 points
                     </div>
                 </div>
                 <div id="game-wrapper-right" class="game-wrapper-container">
                     <div id="game-wrapper-question" class="game-wrapper-block">
                         <h2>Answer the following:</h2>
-                        <p id="question-box">
-                            <i class="fas fa-arrow-circle-right arrow font-awesome-align"></i>
+                        <p id="game-wrapper-question-box">
+                            <i class="fas fa-arrow-circle-right font-awesome-align"></i>
                         </p>
                     </div>
                     <div id="game-wrapper-answer" class="game-wrapper-block">
-                        <h2>Answer box</h2>                        
+                        <input type="number" id="game-wrapper-input">
+                        <button class="btn-primary" id="game-wrapper-check">Check</button>              
                     </div>
                     <div id="game-wrapper-response" class="game-wrapper-block">
                         <i class="fas fa-check-circle fa-2x font-awesome-align"></i> Well done!
@@ -51,5 +54,6 @@
             
         </footer>
     </body>
+
     <script src="scripts/gameEngine.js"></script>
 </html>

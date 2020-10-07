@@ -1,25 +1,29 @@
-function init(gamemode = 'normal') {
-    const request = new XMLHttpRequest();
-    request.onreadystatechange = function() {            
-        if (this.readyState == 4 && this.status == 200) {
-            const jsonData = JSON.parse(this.responseText)[gamemode]['questions'];
-            changeGame(jsonData);
+// Getting the appropiate game data from the game_content folder.
+async function getGameContent(gamemode = 'easy') {
+    const data = new Promise(resolve => {
+        const request = new XMLHttpRequest();
+        request.overrideMimeType("application/json");
+        request.open('GET', 'scripts/game_content/maths.json', true);
+    
+        request.onreadystatechange = function() {
+            if (request.readyState == 4 && request.status == "200") {
+                resolve(JSON.parse(this.responseText)[gamemode]['questions']);
+            }
         }
-    };
+        request.send();
+    });
 
-    request.open('GET', 'scripts/game_content/rekenen.json', true);
-    request.send();
-}
+    return await data;
+}  
 
-function changeGame(arrayOfQuestions) {
-    // Selecting a random question from the arrayOfQuestions array.
-    const randomQuestion = Math.floor(Math.random() * arrayOfQuestions.length);
+(async () => {
+    // Retrieving the game content from getGameContent
+    const gameContent = await getGameContent();
+
+    // Picking a random question from the content
+    const randomQuestion = Math.floor(Math.random() * gameContent.length);
 
     // Adding the question to the DOM model.
-    const question = `${arrayOfQuestions[randomQuestion]['question']}`;
-    const paragraph = document.getElementById('question-box');
-    const text = document.createTextNode(question);
-    paragraph.appendChild(text);
-}
-
-init('easy');
+    const text = document.createTextNode(gameContent[randomQuestion]['question']);
+    document.getElementById('game-wrapper-question-box').appendChild(text);
+})();

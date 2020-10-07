@@ -1,5 +1,4 @@
 /** Main page settings */
-
 * {
     box-sizing: border-box;
 }
@@ -15,7 +14,9 @@ body {
     padding: 0;
 }
 
-/* Changes the selection color from blue to gray */
+/* 
+Changes the selection color from blue to gray 
+*/
 ::selection {
     background: #bababa;
 }
@@ -25,7 +26,6 @@ select::-ms-expand {
 }
 
 /** Header styling */
-
 header {
     padding: 5px;
     background-color: aquamarine;
@@ -42,20 +42,24 @@ nav {
 }
 
 /** Main styling */
-
 main {
     padding: 5px;
 }
 
+/* 
+Wrapper settings for the game engine
+*/
 #game-wrapper {
     display: flex;
     flex-direction: row;
 }
 
-#game-wrapper-title {
-    padding: 20px;
-    background-color: #F6AE2D;
-    border-radius: 4px;
+#game-wrapper-left {
+    width: 40%;
+}
+
+#game-wrapper-right {
+    width: 60%;
 }
 
 .game-wrapper-container {
@@ -64,44 +68,50 @@ main {
     padding: 10px;
 }
 
+/* 
+Styling the game engine components 
+*/
 .game-wrapper-block {
     padding: 5px;
-}
-
-#game-wrapper-left {
-    width: 40%;
-}
-
-#game-wrapper-timer {
-    /*background-color: red;*/
 }
 
 .font-awesome-align {
     vertical-align: middle;
 }
 
-.timer {
-    color: #F6AE2D;
+#game-wrapper-title {
+    padding: 20px;
+    background-color: #F6AE2D;
+    border-radius: 4px;
 }
 
-.arrow {
-    color: #F6AE2D;
-}
-
-#game-wrapper-right {
-    width: 60%;
+#game-wrapper-timer {
+    /*background-color: red;*/
 }
 
 #game-wrapper-answer {
-    height: 100%;
     background-color: antiquewhite;
+}
+
+#game-wrapper-input {
+    -moz-appearance: textfield;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 0;
+    border-radius: 4px;
+}
+
+#game-wrapper-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 #game-wrapper-response {
     display: flex;
     align-items: center;
     padding: 10px;
-    height: 100%;
     background-color: #AEF78E;
     border-radius: 5px;
 }
