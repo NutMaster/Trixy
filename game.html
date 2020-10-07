@@ -35,16 +35,19 @@
                 <div id="game-wrapper-right" class="game-wrapper-container">
                     <div id="game-wrapper-question" class="game-wrapper-block">
                         <h2>Answer the following:</h2>
-                        <p id="game-wrapper-question-box">
-                            <i class="fas fa-arrow-circle-right font-awesome-align"></i>
-                        </p>
+                        <p id="game-wrapper-question-box"></p>
                     </div>
                     <div id="game-wrapper-answer" class="game-wrapper-block">
                         <input type="number" id="game-wrapper-input">
-                        <button class="btn-primary" id="game-wrapper-check">Check</button>              
+                        <button class="btn-primary" id="game-wrapper-check">
+                            Check
+                        </button>              
                     </div>
-                    <div id="game-wrapper-response" class="game-wrapper-block">
+                    <div class="game-wrapper-response game-wrapper-block answer-right">
                         <i class="fas fa-check-circle fa-2x font-awesome-align"></i> Well done!
+                    </div>
+                    <div class="game-wrapper-response game-wrapper-block answer-wrong">
+                        <i class="fas fa-times-circle fa-2x font-awesome-align"></i></i> Wrong answer!
                     </div>
                 </div>
             </div>

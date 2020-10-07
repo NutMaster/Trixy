@@ -60,7 +60,7 @@
     "hard":{
         "questions":[
             {
-                "question": "Wat is de wortel van 9",
+                "question": "sqrt(9)",
                 "correctAnswer": 3
             },
             {

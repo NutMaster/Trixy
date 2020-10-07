@@ -46,6 +46,24 @@ main {
     padding: 5px;
 }
 
+.btn-primary {
+    padding: 10px;
+    margin: 10px 0px;
+    width: 100%;
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color:#F6AE2D;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #bd8318;
+}
+
 /* 
 Wrapper settings for the game engine
 */
@@ -90,7 +108,7 @@ Styling the game engine components
 }
 
 #game-wrapper-answer {
-    background-color: antiquewhite;
+    /*background-color: antiquewhite;*/
 }
 
 #game-wrapper-input {
@@ -98,7 +116,8 @@ Styling the game engine components
     display: block;
     width: 100%;
     padding: 10px;
-    outline: none;
+    margin: 10px 0px;
+    outline: 1px solid #F6AE2D;
     border: 0;
     border-radius: 4px;
 }
@@ -108,12 +127,23 @@ Styling the game engine components
     margin: 0;
 }
 
-#game-wrapper-response {
+.game-wrapper-response {
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #AEF78E;
     border-radius: 5px;
+}
+
+.answer-wrong {
+    background-color: #F7717D;
+    color: #9e010e;
+    display: none;
+}
+
+.answer-right {
+    background-color: #AEF78E;
+    color: #32a103;
+    display: none;
 }
 
 /** Footer styling */

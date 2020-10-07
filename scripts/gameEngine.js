@@ -1,5 +1,5 @@
 // Getting the appropiate game data from the game_content folder.
-async function getGameContent(gamemode = 'easy') {
+async function getGameContent(gamemode = 'normal') {
     const data = new Promise(resolve => {
         const request = new XMLHttpRequest();
         request.overrideMimeType("application/json");
@@ -14,16 +14,54 @@ async function getGameContent(gamemode = 'easy') {
     });
 
     return await data;
-}  
+}
+
+function pickQuestion(object) {
+    const randomQuestionNumber = Math.floor(Math.random() * object.length);
+    return object[randomQuestionNumber];
+}
 
 (async () => {
-    // Retrieving the game content from getGameContent
-    const gameContent = await getGameContent();
+        // Retrieving the game content from getGameContent
+        const gameContent = await getGameContent('easy');
 
-    // Picking a random question from the content
-    const randomQuestion = Math.floor(Math.random() * gameContent.length);
+        // Initializing required DOM objects
+        const correctAnswerDOM = document.querySelector('.answer-right');
+        const wrongAnswerDOM = document.querySelector('.answer-wrong');
+        const inputField = document.getElementById('game-wrapper-input');
+        const questionBox = document.getElementById('game-wrapper-question-box');
+        const answerButton = document.getElementById('game-wrapper-check');
 
-    // Adding the question to the DOM model.
-    const text = document.createTextNode(gameContent[randomQuestion]['question']);
-    document.getElementById('game-wrapper-question-box').appendChild(text);
+        function nextQuestion() {
+            // Changing DOM model back to default values
+            correctAnswerDOM.style.display = 'none';
+            wrongAnswerDOM.style.display = 'none';
+            questionBox.innerHTML = '';
+
+            // Picking a random question from the content
+            const question = pickQuestion(gameContent);
+
+            // Adding the question to the DOM model.
+            questionBox.innerHTML = `<i class="fas fa-arrow-circle-right font-awesome-align"></i> ${question['question']}`;
+            
+            // Checking
+            function check() {
+                if (inputField.value) {
+                    const answer = parseInt(inputField.value);
+                    if (question['correctAnswer'] === answer) {
+                        console.log('Correct');
+                        correctAnswerDOM.style.display = 'block';
+                        nextQuestion();
+                    } else {
+                        console.log('Wrong');
+                        wrongAnswerDOM.style.display = 'block';
+                    }
+                }
+            }
+        }
+
+        // Setting up the event listener
+        answerButton.addEventListener('click', check);
+
+        nextQuestion();
 })();
