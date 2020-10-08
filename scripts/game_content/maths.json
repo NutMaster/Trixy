@@ -1,0 +1,86 @@
+{
+    "easy":{
+        "questions":[
+            {
+                "ID": 1,
+                "question": "4 x 4",
+                "correctAnswer": 16
+            },
+            {
+                "ID": 2,
+                "question": "5 - 2",
+                "correctAnswer": 3
+            },
+            {
+                "ID": 3,
+                "question": "25 + 15",
+                "correctAnswer": 40
+            },
+            {
+                "ID": 4,
+                "question": "35 + 25",
+                "correctAnswer": 60
+            },
+            {
+                "ID": 5,
+                "question": "25 + 15",
+                "correctAnswer": 40
+            },
+            {
+                "ID": 6,
+                "question": "51 + 16",
+                "correctAnswer": 67
+            },
+            {
+                "ID": 7,
+                "question": "48 + 42",
+                "correctAnswer": 90
+            },
+            {
+                "ID": 8,
+                "question": "47 + 39",
+                "correctAnswer": 86
+            },
+            {
+                "ID": 9,
+                "question": "3 x 9",
+                "correctAnswer": 27
+            },
+            {
+                "ID": 10,
+                "question": "20 - 13",
+                "correctAnswer": 7
+            }
+        ]
+    },
+
+    "normal":{
+        "questions":[
+            {
+                "ID": 1,
+                "question": "32 x 3",
+                "correctAnswer": 96
+            },
+            {
+                "ID": 2,
+                "question": "36 / 6",
+                "correctAnswer": 6
+            }
+        ]
+    },
+
+    "hard":{
+        "questions":[
+            {
+                "ID": 1,
+                "question": "sqrt(9)",
+                "correctAnswer": 3
+            },
+            {
+                "ID": 2,
+                "question": "12 x 12",
+                "correctAnswer": 144
+            }
+        ]
+    }
+}

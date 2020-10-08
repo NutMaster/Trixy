@@ -1,5 +1,4 @@
 /** Main page settings */
-
 * {
     box-sizing: border-box;
 }
@@ -15,7 +14,9 @@ body {
     padding: 0;
 }
 
-/* Changes the selection color from blue to gray */
+/* 
+Changes the selection color from blue to gray 
+*/
 ::selection {
     background: #bababa;
 }
@@ -25,9 +26,8 @@ select::-ms-expand {
 }
 
 /** Header styling */
-
 header {
-    padding: 10px;
+    padding: 5px;
     background-color: aquamarine;
 }
 
@@ -42,19 +42,112 @@ nav {
 }
 
 /** Main styling */
-
 main {
+    padding: 5px;
+}
+
+.btn-primary {
+    padding: 10px;
+    margin: 10px 0px;
+    width: 100%;
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color:#F6AE2D;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #bd8318;
+}
+
+/* 
+Wrapper settings for the game engine
+*/
+#game-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#game-wrapper-left {
+    width: 40%;
+}
+
+#game-wrapper-right {
+    width: 60%;
+}
+
+.game-wrapper-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/* 
+Styling the game engine components 
+*/
+.game-wrapper-block {
+    padding: 5px;
+}
+
+.font-awesome-align {
+    vertical-align: middle;
+}
+
+#game-wrapper-title {
     padding: 20px;
+    background-color: #F6AE2D;
+    border-radius: 4px;
 }
 
-#console-answer {
-    padding: 20px;
+#game-wrapper-timer {
+    /*background-color: red;*/
 }
 
-.player-correct {
-    background-color: green;
+#game-wrapper-answer {
+    /*background-color: antiquewhite;*/
 }
 
-.player-false {
-    background-color: red;
+#game-wrapper-input {
+    -moz-appearance: textfield;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+    outline: 1px solid #F6AE2D;
+    border: 0;
+    border-radius: 4px;
+}
+
+#game-wrapper-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.game-wrapper-response {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.answer-wrong {
+    background-color: #F7717D;
+    color: #9e010e;
+    display: none;
+}
+
+.answer-right {
+    background-color: #AEF78E;
+    color: #32a103;
+    display: none;
+}
+
+/** Footer styling */
+
+footer {
+    padding: 5px;
 }
