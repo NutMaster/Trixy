@@ -61,7 +61,7 @@ main {
 }
 
 .btn-primary:hover {
-    background-color: #bd8318;
+    background-color: #c5902f;
 }
 
 /* 
@@ -93,6 +93,10 @@ Styling the game engine components
     padding: 5px;
 }
 
+.font-block {
+    display: block;
+}
+
 .font-awesome-align {
     vertical-align: middle;
 }
@@ -101,14 +105,6 @@ Styling the game engine components
     padding: 20px;
     background-color: #F6AE2D;
     border-radius: 4px;
-}
-
-#game-wrapper-timer {
-    /*background-color: red;*/
-}
-
-#game-wrapper-answer {
-    /*background-color: antiquewhite;*/
 }
 
 #game-wrapper-input {
@@ -144,6 +140,10 @@ Styling the game engine components
     background-color: #AEF78E;
     color: #32a103;
     display: none;
+}
+
+.orange-icon {
+    color: #F26419;
 }
 
 /** Footer styling */

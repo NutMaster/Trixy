@@ -25,19 +25,24 @@
             <h1 id="game-wrapper-title">Mathematics | easy</h1>
             <div id="game-wrapper">
                 <div id="game-wrapper-left" class="game-wrapper-container">
-                   <div id="game-wrapper-timer" class="game-wrapper-block">
+                   <div class="game-wrapper-block">
                         <h2>Time left: 90 seconds</h2>
                    </div>
-                   <div id="game-wrapper-timer" class="game-wrapper-block">
-                        <i class="fas fa-award fa-2x font-awesome-align"></i></i> 0 points
+                   <div class="game-wrapper-block font-block">
+                        <i class="fas fa-award fa-2x font-awesome-align orange-icon"></i>
+                        <span id="game-wrapper-points">0 points</span>
+                    </div>
+                    <div class="game-wrapper-block font-block">
+                        <i class="fas fa-bahai fa-2x font-awesome-align orange-icon"></i> 
+                        <span id="game-wrapper-attempts"></span>
                     </div>
                 </div>
                 <div id="game-wrapper-right" class="game-wrapper-container">
                     <div id="game-wrapper-question" class="game-wrapper-block">
-                        <h2>Answer the following:</h2>
+                        <h2>Answer the following question(s):</h2>
                         <p id="game-wrapper-question-box"></p>
                     </div>
-                    <div id="game-wrapper-answer" class="game-wrapper-block">
+                    <div class="game-wrapper-block">
                         <input type="number" id="game-wrapper-input">
                         <button class="btn-primary" id="game-wrapper-check">
                             Check
