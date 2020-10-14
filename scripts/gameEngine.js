@@ -106,11 +106,12 @@ const questionDOM = questionObject => {
         // Moving to the next question if the button is clicked and if the answer is correct.
         answerButton.onclick = function() {
             if (inputField.value) {
-                attempts--;
-                updateAttemptCounter(attempts);
                 const continueGame = checkQuestion(questionObject, attempts);
                 if (continueGame) {
                     nextQuestion();
+                } else {
+                    attempts--;
+                    updateAttemptCounter(attempts);
                 }
             }
         }
