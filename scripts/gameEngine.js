@@ -1,9 +1,11 @@
+// Game variables
+let questionObject, attempts, pointCount;
+
+// DOM Objects
 const correctAnswerDOM = document.querySelector('.answer-right');
 const wrongAnswerDOM = document.querySelector('.answer-wrong');
-
 const attemptCount = document.getElementById('game-wrapper-attempts');
-const pointCount = document.getElementById('game-wrapper-points');
-
+const pointCountDOM = document.getElementById('game-wrapper-points');
 const inputField = document.getElementById('game-wrapper-input');
 const questionBox = document.getElementById('game-wrapper-question-box');
 const answerButton = document.getElementById('game-wrapper-check');
@@ -49,11 +51,7 @@ const correctAnswer = () => {
 }
 
 const updateAttemptCounter = (attempt = 3) => {
-    if (attempt === 1) {
-        attemptCount.textContent = `1 attempt left.`;
-    } else {
-        attemptCount.textContent = `${attempt} attempts left.`;
-    }
+    attemptCount.textContent = `${attempt} attempt(s) left.`;
 }
 
 const pickQuestion = jsonData => {
@@ -63,7 +61,8 @@ const pickQuestion = jsonData => {
 
 const checkQuestion = (questionObject, attempts) => {
     // Check if the user has attempts left, if not the game should continue.
-    if (attempts <= 0) {
+    console.log(attempts);
+    if (attempts < 1) {
         return true;
     }
 
@@ -81,12 +80,35 @@ const checkQuestion = (questionObject, attempts) => {
 const questionDOM = questionObject => {
     // Changing DOM model back to default values.
     inputField.value = '';
-    questionBox.innerHTML = '';
-    updateAttemptCounter();
     inputField.focus();
+    updateAttemptCounter();
     
     // Adding the question to the DOM model.
     questionBox.innerHTML = `<i class="fas fa-arrow-circle-right font-awesome-align orange-icon"></i> ${questionObject['question']}`;
+}
+
+const loadQuestion = gameContent => {
+    attempts = 3;
+    questionObject = pickQuestion(gameContent);
+    questionDOM(questionObject);
+}
+
+const continueGame = gameContent => {
+    const continueGame = checkQuestion(questionObject, attempts);
+    if (continueGame) {
+        loadQuestion(gameContent);
+
+        /*
+        This should become an algorithm to determine the points given.
+        pointCount += 40;
+
+        Update the DOM.
+        pointCountDOM.textContent = `${pointCount} points`;
+        */
+    } else {
+        attempts--;
+        updateAttemptCounter(attempts);
+    }
 }
 
 (async () => {
@@ -94,30 +116,17 @@ const questionDOM = questionObject => {
         const gameContent = await getGameContent('easy');
 
         // Initializing the game engine.
-        let questionObject, attempts;
-        nextQuestion();
-
-        function nextQuestion() {
-            attempts = 3;
-            questionObject = pickQuestion(gameContent);
-            questionDOM(questionObject);
-        }
+        loadQuestion(gameContent);
 
         // Moving to the next question if the button is clicked and if the answer is correct.
         answerButton.onclick = function() {
             if (inputField.value) {
-                const continueGame = checkQuestion(questionObject, attempts);
-                if (continueGame) {
-                    nextQuestion();
-                } else {
-                    attempts--;
-                    updateAttemptCounter(attempts);
-                }
+                continueGame(gameContent);
             }
         }
 
         inputField.addEventListener('keyup', event => {
-            if (event.keyCode === 13) {
+            if (event.key === 'Enter') {
                 answerButton.click();
             }
         });
